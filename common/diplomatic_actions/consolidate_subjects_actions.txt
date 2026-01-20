@@ -25,17 +25,34 @@
 	}
 
 	accept_effect = {
-		scope:target_country = {
-			ordered_country ?= {
+		overlord = {
+			ordered_direct_subject = {
 				limit = {
 					can_be_consolidation_recipient = yes
 				}
+        position = 0
 				order_by = country_rank
 				annex_with_incorporation = scope:target_country
+        save_scope_as = recipient_country
 				add_liberty_desire = -20
 				overlord = {
 					create_unidirectional_truce = { country = prev months = 12 }
 				}
+        scope:target_country = {
+          every_primary_culture = {
+            save_scope_as = target_culture
+            limit = {
+              NOT = {
+                scope:recipient_country = {
+                  country_has_primary_culture = scope:target_culture
+                }
+              }
+            }
+            scope:recipient_country = {
+              add_primary_culture = scope:target_culture
+            }
+          }
+        }
 			}
 		}	
 	}
