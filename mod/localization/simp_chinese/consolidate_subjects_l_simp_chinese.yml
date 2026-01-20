@@ -1,0 +1,33 @@
+﻿l_simp_chinese:
+  consolidate_subject: "整合附庸"
+  consolidate_subject_action_name: "整合[concept_subject]"
+  consolidate_subject_desc: "将目标[concept_subject]整合到相邻的[concept_subject]中，形成单一[concept_country]。两个附庸必须具有较低的[concept_autonomy]、较低的[concept_liberty_desire]，并共享文化特征。"
+  consolidate_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName]整合行政管理"
+  consolidate_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName]决定整合我们。"
+  consolidate_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName]整合附庸"
+  consolidate_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName]已整合[TARGET_COUNTRY.GetName]。"
+
+  is_not_african_subject: "此附庸不是我们的非洲殖民地行政管理之一"
+  consolidate_subject_country_tier_tt: "附庸的[concept_country_tier]为$country_tier_city_state$、$country_tier_principality$或$country_tier_grand_principality$"
+  consolidate_subject_country_tier_kingdom_tt: "附庸的[concept_country_tier]为$country_tier_kingdom$"
+  consolidate_subject_vassal_type_tt: "是$subject_type_vassal$或$subject_type_puppet$"
+  consolidate_subject_primary_culture_tt: "与被整合的附庸共享[Concept('concept_primary_cultures', '$concept_primary_culture$')]"
+  consolidate_subject_acceptance_tt: "[SCOPE.sC('target_country').GetOverlord.GetName]已研究[GetTechnology('pan-nationalism').GetName]和[GetTechnology('civilizing_mission').GetName]，且被整合附庸的所有[concept_primary_cultures]必须共享[Concept('concept_discrimination_trait', '$concept_discrimination_trait_short$')]，并且至少拥有@acceptance_status_4! $second_rate_citizen$的[concept_acceptance_status]"
+
+  overlord_can_consolidate_subject_setting_name: "整合附庸"
+  alert_overlord_can_consolidate_subject_name: "[SCOPE.GetRootScope.GetCountry.GetName]可使用[GetDiplomaticActionType('consolidate_subject').GetName]"
+  alert_overlord_can_consolidate_subject_desc: "我们的[concept_subject] [SCOPE.GetRootScope.GetCountry.GetName]可以整合到相邻的附庸中。"
+  alert_overlord_can_consolidate_subject_hint: "您可以在外交面板的附庸选项卡中执行[GetDiplomaticActionType('consolidate_subject').GetName] [concept_diplomatic_action]。"
+  alert_overlord_can_consolidate_subject_action: "外交面板"
+
+  ag_can_consolidate_subject_name: "可以[GetDiplomaticActionType('consolidate_subject').GetName]"
+  ag_can_consolidate_subject_desc: "存在符合[GetDiplomaticActionType('consolidate_subject').GetName]条件的[concept_subject] [Concept('concept_country', '$concept_countries$')]"
+  ag_can_consolidate_subject_tooltip: "#header $ag_can_consolidate_subject_name$#!\n$TOOLTIP_DELIMITER$\n$ag_can_consolidate_subject_desc$\n\n$ALERT_GROUP_TOOLTIP_FOOTER$"
+
+  rule_consolidate_subject_action: "整合附庸"
+  setting_consolidate_subject_enabled: "启用"
+  setting_consolidate_subject_enabled_desc: "拥有相似[concept_primary_cultures]的[Concept('concept_subject', '$concept_subjects$')]可以通过[concept_overlord_action]整合。"
+  setting_consolidate_subject_player_only: "仅限玩家"
+  setting_consolidate_subject_player_only_desc: "拥有相似[concept_primary_cultures]的[Concept('concept_subject', '$concept_subjects$')]可以通过[concept_overlord_action]整合。AI无法整合附庸。"
+  setting_consolidate_subject_disabled: "禁用"
+  setting_consolidate_subject_disabled_desc: "整合附庸[concept_overlord_action]不可用。"
