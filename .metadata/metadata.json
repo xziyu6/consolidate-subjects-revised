@@ -1,0 +1,14 @@
+{
+  "name" : "Consolidate Subjects",
+	"id" : "",
+  "version" : "1.12",
+  "supported_game_version" : "",
+  "short_description" : "",
+  "tags" : [
+    "1.12"
+  ],
+  "relationships" : [],
+  "game_custom_data" : {
+    "multiplayer_synchronized" : true
+  }
+}
