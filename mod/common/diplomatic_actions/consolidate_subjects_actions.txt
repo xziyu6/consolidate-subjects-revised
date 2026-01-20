@@ -40,16 +40,15 @@
 				}
         scope:target_country = {
           every_primary_culture = {
-            save_scope_as = target_culture
             limit = {
               NOT = {
                 scope:recipient_country = {
-                  country_has_primary_culture = scope:target_culture
+                  country_has_primary_culture = prev
                 }
               }
             }
             scope:recipient_country = {
-              add_primary_culture = scope:target_culture
+              add_primary_culture = prev
             }
           }
         }
